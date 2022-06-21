@@ -1,0 +1,47 @@
+<div class="sidebar_section ">
+                           <div class="sidebar_section_title ">Tutorial Contents</div>
+                            <div class="sidebar_categories ">
+                            <ul class="main_navv">
+                                {% for tutorial in sidebar %} {% if forloop.counter0 == this_tutorial_idx %}
+                                <li class="active "><a href="{{tutorial.tutorial_slug}} ">Chapter {{forloop.counter0 }} :{{tutorial.title}}</a></li>
+                                {% else %}
+                                <li><a href="{{tutorial.tutorial_slug}} ">Chapter {{forloop.counter0 }}:{{tutorial.title}}</a></li>
+                                {%endif%} {%endfor %}
+                            </ul></div>
+                        </div>
+
+                         <!-- Feature -->
+                            <div class="sidebar_section ">
+                                <div class="sidebar_section_title ">Teacher</div>
+                                <div class="sidebar_teacher ">
+                                    <div class="teacher_title_container d-flex flex-row align-items-center justify-content-start ">
+                                        <div class="teacher_image "><img src="static/main/images/Ab.png " alt=" "></div>
+                                        <div class="teacher_title ">
+                                            <div class="teacher_name "><a href="www.facebook.com/abraham.genetu.125 ">Abraham Genetu</a></div>
+                                            <div class="teacher_position ">Computer Science and Electronics</div>
+                                        </div>
+                                    </div>
+                                    <div class="teacher_meta_container ">
+                                        <!-- Teacher Rating -->
+                                        <div class="teacher_meta d-flex flex-row align-items-center justify-content-start ">
+                                            <div class="teacher_meta_title ">Average Rating:</div>
+                                            <div class="teacher_meta_text ml-auto "><span>4.7</span><i class="fa fa-star " aria-hidden="true "></i></div>
+                                        </div>
+                                        <!-- Teacher Review -->
+                                        <div class="teacher_meta d-flex flex-row align-items-center justify-content-start ">
+                                            <div class="teacher_meta_title ">Review:</div>
+                                            <div class="teacher_meta_text ml-auto "><span>12k</span><i class="fa fa-comment " aria-hidden="true "></i></div>
+                                        </div>
+                                        <!-- Teacher Quizzes -->
+                                        <div class="teacher_meta d-flex flex-row align-items-center justify-content-start ">
+                                            <div class="teacher_meta_title ">Quizzes:</div>
+                                            <div class="teacher_meta_text ml-auto "><span>600</span><i class="fa fa-user " aria-hidden="true "></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="teacher_info ">
+                                        <p>Hi! I am Abraham, I’m a Computer Science teacher here at preons.
+                                            "Change is the end result of all true learning. " <br>
+                                             Happy Learning.</p>
+                                    </div>
+                                </div>
+                            </div>

@@ -1,0 +1,80 @@
+{% extends "static/header.html" %}
+{% block content %}
+<!-- Header Search Panel -->
+            <link rel="stylesheet" type="text/css" href="/static/main/styles/about.css">
+            <link rel="stylesheet" type="text/css" href="/static/main/styles/about_responsive.css">
+                <script src="/static/main/js/about.js "></script>
+        <!-- Menu -->
+        <!-- Home -->
+
+        <div class="home">
+            <div class="breadcrumbs_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>{{user.username}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Feature -->
+
+
+
+        <div class="team ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col ">
+                        <div class="section_title_container text-center ">
+                            <h2 class="section_title ">Hello {{user.username}}</h2>
+                            <div class="section_subtitle ">
+                                <p>This is preons online course platform that you rely on always</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row team_row ">
+
+
+
+                    <!-- Team Item -->
+                    <div class="col-lg-6 col-md-6 team_col ">
+                        <div class="team_item ">
+                           <br>
+                            <div class="team_image "><img src="/static/main/images/user.png" alt=" "></div>
+                            <div class="team_body ">
+                                <div class="team_title "><a href="# ">{{user.username}}</a></div>
+                                <div class="team_subtitle ">Preons E-Learner</div>
+                                <div class="social_list ">
+                                    <ul>
+                                        <li><a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a></li>
+                                        <li><a href="# "><i class="fa fa-twitter " aria-hidden="true "></i></a></li>
+                                        <li><a href="# "><i class="fa fa-google-plus " aria-hidden="true "></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 team_col ">
+                        <div class="team_item ">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Counter -->
+
+        <!-- Partners -->
+
+     {% include "static/includes/footer.html"%}
+{%endblock%}

@@ -1,0 +1,32 @@
+<div class="col-lg-4">
+    <div class="sidebar">
+
+        <!-- Categories -->
+        <div class="sidebar_section">
+            <div class="sidebar_section_title">Courses Categories</div>
+            <div class="sidebar_categories">
+                <ul>
+                    {% for cat in categories %} {% if forloop.counter0 == cat.tutorial_category%}
+                    <li class="active"><a href="{{cat.category_slug}}">{{cat.tutorial_category}}</a></li>
+                    {% else %}
+                    <li><a href="{{cat.category_slug}}">{{cat.tutorial_category}}</a></li>
+                    {%endif%} {%endfor %}
+                </ul>
+            </div>
+        </div>
+
+        {% include "static/includes/latestcourses.html"%}
+        <!-- Banner -->
+        <div class="sidebar_section">
+            <div class="sidebar_banner d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="sidebar_banner_background" style="background-image:url(/static/main/images/banner_1.jpg)"></div>
+                <div class="sidebar_banner_overlay"></div>
+                <div class="sidebar_banner_content">
+                    <div class="banner_title">Free Book </div>
+                    <div class="banner_button"><a href="#">download now</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

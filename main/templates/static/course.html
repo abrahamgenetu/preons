@@ -1,0 +1,109 @@
+{% extends "static/header.html" %} {% block content %}
+<link rel="stylesheet" type="text/css" href="/static/main/styles/course.css">
+<link rel="stylesheet" type="text/css" href="/static/main/styles/course_responsive.css">
+   <!-- Home -->
+
+<!-- Home -->
+
+<div class="home">
+    <div class="breadcrumbs_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li>
+                                <a href=/">Home</a></li>
+								<li>{{tutorial.tutorial_series}}</li>
+                                <li>{{tutorial.title}}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Course -->
+
+	<div class="course ">
+		<div class="container ">
+			<div class="row ">
+				<!-- Course -->
+				<div class="col-lg-8 ">
+
+					<div class="course_container ">
+						<div class="course_title ">{{tutorial.title}}</div>
+						<div class="course_info d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start ">
+
+							          <!-- Course Info Item -->
+                        <div class="course_info_item ">
+                            <div class="course_info_title ">Student:</div>
+                            <div class="course_info_text "><a href="# ">{{user.username}}</a></div>
+                        </div>
+
+                        <!-- Course Info Item -->
+                        <div class="course_info_item ">
+                            <div class="course_info_title ">Reviews:</div>
+                            <div class="rating_r rating_r_4 "><i></i><i></i><i></i><i></i><i></i></div>
+                        </div>
+
+                        <!-- Course Info Item -->
+                        <div class="course_info_item ">
+                            <div class="course_info_title ">Course Title:</div>
+                            <div class="course_info_text "><a href="# ">{{tutorial.tutorial_series}}</a></div>
+                        </div>
+
+                    </div>
+
+						 <!-- Course Tabs -->
+                    <div class="course_tabs_container ">
+                        <div class="tabs d-flex flex-row align-items-center justify-content-start ">
+
+                            <div class="tab active ">Introduction</div>
+                            <div class="tab ">Lessons</div>
+                            <div class="tab ">Summary</div>
+
+                        </div>
+                        <div class="tab_panels ">
+
+                            <!-- Description -->
+                            <div class="tab_panel active ">
+                                <div class="tab_panel_content ">
+                                    <p> {{tutorial.content_first|safe}}</p>
+                                </div>
+                            </div>
+
+                            <!-- Lesson -->
+                            <div class="tab_panel tab_panel_2 ">
+                                <div class="tab_panel_content ">
+                                    {{tutorial.content_second|safe}}
+                                </div>
+                            </div>
+
+                            <!-- Reviews -->
+                            <div class="tab_panel tab_panel_3 ">
+                                <div class="tab_panel_content ">
+                                    {{tutorial.content_third|safe}}
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+					</div>
+                </div>
+				<!-- Course Sidebar -->
+				<div class="col-lg-4 ">
+					<div class="sidebar ">
+                    <div class="sidebar_section">
+                        {% include "static/includes/course side.html"%}
+
+                   {% include "static/includes/latestcourses.html"%}
+                    </div>
+                    </div>
+
+					</div>
+			</div>
+        </div>
+    </div>
+{% include "static/includes/footer.html"%}
+{%endblock%}

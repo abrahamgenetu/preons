@@ -1,0 +1,57 @@
+<!-- Popular Courses -->
+        <div class="courses ">
+            <div class="section_background parallax-window " data-parallax="scroll " data-image-src="/static/main/images/courses_background.jpg " data-speed="0.8 "></div>
+            <div class="container ">
+                <div class="row ">
+                    <div class="col ">
+                        <div class="section_title_container text-center ">
+                            <h2 class="section_title ">Popular Online Courses</h2>
+                            <div class="section_subtitle ">
+                                <p>These are our online courses that can expands access to educations options and pathways for students through quality online, hybrid, and web-enhanced courses by
+                                    embracing innovative and accessible modes of course development and delivery.</p> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row courses_row ">
+                {% for cat in categories %}
+                    <!-- Course -->
+
+                    <div class="col-lg-4 course_col ">
+                         <div class="course " style="margin-top: 25px;">
+                            <div class="course_image "><img class="img-responsive watch-right" alt="not found"
+                                                            src= "/static/main/images/courses/preons.jpg"></div>
+                            <div class="course_body ">
+                                <h3 class="course_title "><a href="{{cat.category_slug}}">{{cat.tutorial_category}}</a></h3>
+                                <div class="course_teacher ">brought you by preons</div>
+                                <div class="course_text ">
+                                    <p>{{cat.category_summary}}</p>
+                                </div>
+                            </div>
+                            <div class="course_footer ">
+                                <div class="course_footer_content d-flex flex-row align-items-center justify-content-start ">
+                                    <div class="course_info ">
+                                        <i class="fa fa-graduation-cap " aria-hidden="true "></i>
+                                        <span>For beginner's</span>
+                                    </div>
+                                    <div class="course_info ">
+                                        <i class="fa fa-star " aria-hidden="true "></i>
+                                        <span>5 Ratings</span>
+                                    </div>
+                                 <div class="course_price ml-auto ">{{published}}</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                {% endfor %}
+                </div>
+
+                <div class="row ">
+                    <div class="col ">
+                        <div class="courses_button trans_200 "><a href="/premium">view all courses</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>

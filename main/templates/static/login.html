@@ -1,0 +1,194 @@
+
+{% extends "static/header.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/main/styles/about_responsive.css">
+<link rel="stylesheet" type="text/css" href="/static/main/styles/about.css">
+<link rel="stylesheet" type="text/css" href="/static/main/styles/responsive.css">
+
+        <!-- Features -->
+
+
+        <div class="home">
+            <div class="breadcrumbs_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>Login</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Counter -->
+
+        <div class="counter ">
+            <div class="counter_background " style="background-image:url(/static/main/images/counter_background.jpg) "></div>
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-6 ">
+                        <div class="counter_content ">
+                            <h2 class="counter_title ">Login Now</h2>
+                            <div class="counter_text ">
+                                <p>
+                                    We are going to provide the summer regular education on our website for all students who want to develop his or her skills of computer and other technological knowledges with Preons. Please Register now for our limited space of student we are gonna provide.
+                                <br>If you don't already have an account,</p>
+                                 <div class="courses_button trans_200 "><a href="/register/">Register Now</a></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="counter_form ">
+                    <div class="row fill_height ">
+                        <div class="col fill_height ">
+<!--                             <form method="POST" class="counter_form_content d-flex flex-column align-items-center justify-content-center "-->
+<!--                              style=" font-style: italic; font-weight: 500; text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #121316;line-height: 1.45;">-->
+<!--                            <h3 class="section_title">Login Form <br><br></h3>-->
+<!--                               {% csrf_token %}-->
+<!--                               {{form.as_p}}-->
+<!--                                 <button  class="courses_button trans_200 " type="submit">Login</button>-->
+<!--                                  </form>-->
+ <form method="POST" class="s12">
+                         {% csrf_token %}
+<!--                                {{form.as_p}}-->
+                        <div>
+                            <div class="input-field s12">
+                                <input type="text" data-ng-model="name" class="validate" name="{{form.username.html_name}}">
+                                <label>User name</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input-field s12">
+                                <input type="password" class="validate" name="{{form.password.html_name}}">
+                                <label>Password</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="s12 log-ch-bx">
+                                <p>
+                                    <input type="checkbox" id="test5" />
+                                    <label for="test5">Remember me</label>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input-field s4">
+                                <input type="submit" value="Login" class="waves-effect waves-light log-in-btn"> </div>
+                        </div>
+                        <div>
+                            <div class="input-field s12"> <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal3">Forgot password</a> | <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal2">Create a new account</a> </div>
+                        </div>
+                    </form>
+                         </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="events ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col ">
+                        <div class="section_title_container text-center ">
+                            <h2 class="section_title ">Upcoming events</h2>
+                            <div class="section_subtitle ">
+                                <p>Here is the our notice board for the upcoming events planned by the Preons Academy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row events_row ">
+
+                    <!-- Event -->
+                    <div class="col-lg-4 event_col ">
+                        <div class="event event_left ">
+                            <div class="event_image "><img src="/static/main/images/registration.jpg " alt=" "></div>
+                            <div class="event_body d-flex flex-row align-items-start justify-content-start ">
+                                <div class="event_date ">
+                                    <div class="d-flex flex-column align-items-center justify-content-center trans_200 ">
+                                        <div class="event_day trans_200 ">21</div>
+                                        <div class="event_month trans_200 ">Aug</div>
+                                    </div>
+                                </div>
+                                <div class="event_content ">
+                                    <div class="event_title "><a href="# ">Registration for the summer tech students.</a></div>
+                                    <div class="event_info_container ">
+                                        <div class="event_info "><i class="fa fa-clock-o " aria-hidden="true "></i><span>15.00 - 19.30</span></div>
+                                        <div class="event_info "><i class="fa fa-map-marker " aria-hidden="true "></i><span>25 Bahir Dar City</span></div>
+                                        <div class="event_text ">
+                                            <p>This registration held on the Aug in this site or in Bahir dar,Ethiopia.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event -->
+                    <div class="col-lg-4 event_col ">
+                        <div class="event event_mid ">
+                            <div class="event_image "><img src="/static/main/images/upcoming.png" alt=" "></div>
+                            <div class="event_body d-flex flex-row align-items-start justify-content-start ">
+                                <div class="event_date ">
+                                    <div class="d-flex flex-column align-items-center justify-content-center trans_200 ">
+                                        <div class="event_day trans_200 ">27</div>
+                                        <div class="event_month trans_200 ">Aug</div>
+                                    </div>
+                                </div>
+                                <div class="event_content ">
+                                    <div class="event_title "><a href="# ">Educational tutorial with workshop labratory practice.(Aug 21- Dec 21)</a></div>
+                                    <div class="event_info_container ">
+                                        <div class="event_info "><i class="fa fa-clock-o " aria-hidden="true "></i><span>09.00 - 17.30</span></div>
+                                        <div class="event_info "><i class="fa fa-map-marker " aria-hidden="true "></i><span>25 Bahir Dar</span></div>
+                                        <div class="event_text ">
+                                            <p>This educational time covers topics now being debated before...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event -->
+                    <div class="col-lg-4 event_col ">
+                        <div class="event event_right ">
+                            <div class="event_image "><img src="/static/main/images/inoviation.png" alt=" "></div>
+                            <div class="event_body d-flex flex-row align-items-start justify-content-start ">
+                                <div class="event_date ">
+                                    <div class="d-flex flex-column align-items-center justify-content-center trans_200 ">
+                                        <div class="event_day trans_200 ">01</div>
+                                        <div class="event_month trans_200 ">Sep</div>
+                                    </div>
+                                </div>
+                                <div class="event_content ">
+                                    <div class="event_title "><a href="# ">Grand innoviation week for students</a></div>
+                                    <div class="event_info_container ">
+                                        <div class="event_info "><i class="fa fa-clock-o " aria-hidden="true "></i><span>13.00 - 18.30</span></div>
+                                        <div class="event_info "><i class="fa fa-map-marker " aria-hidden="true "></i><span>25 New York City</span></div>
+                                        <div class="event_text ">
+                                            <p>Students generally agree on a need for reform to new era of tech, but not on which path...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+     {% include "static/includes/footer.html"%}
+{%endblock%}
+

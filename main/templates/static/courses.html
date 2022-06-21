@@ -1,0 +1,88 @@
+{% extends "static/header.html" %}
+{% block content %}
+  <link rel="stylesheet" type="text/css" href="/static/main/styles/courses.css">
+  <link rel="stylesheet" type="text/css" href="/static/main/styles/courses_responsive.css">
+   <script src="/static/main/js/courses.js"></script>
+
+
+        <div class="home">
+            <div class="breadcrumbs_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>courses</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="courses">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Courses Main Content -->
+                    <div class="col-lg-8">
+                        <div class="courses_search_container">
+                            <form action="#" id="courses_search_form" class="courses_search_form d-flex flex-row align-items-center justify-content-start">
+                                <input type="search" class="courses_search_input" placeholder="Search Courses" required="required">
+                                <select id="courses_search_select" class="courses_search_select courses_search_input">
+								<option value="courses.html">All Categories</option>
+                                <option value="software.html">Software Programmings</option>
+                                <option value="ai.html">Artificial Intelligence</option>
+								<option value="Medical.html">Medical Sciences </option>
+							</select>
+                                <button action="submit" class="courses_search_button ml-auto">search now</button>
+                            </form>
+                        </div>
+                        <div class="courses_container">
+                            <div class="row courses_row">
+                             {% for tut, partone in part_ones.items %}
+                                <!-- Course -->
+                                <div class="col-lg-6 course_col">
+                                    <div class="course">
+                                        <div class="course_image "><img class="img-responsive watch-right" alt="not found"
+                                                            src= "/static/main/images/courses/preons.jpg"></div>
+                                        <div class="course_body">
+                                            <h3 class="course_title"><a href="{{partone}}">{{tut.tutorial_series}}</a></h3>
+                                            <div class="course_teacher">Mr. Abraham</div>
+                                            <div class="course_text">
+                                                <p>{{tut.series_summary}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="course_footer">
+                                            <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                                                <div class="course_info">
+                                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                                    <span>20 Student</span>
+                                                </div>
+                                                <div class="course_info">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <span>5 Ratings</span>
+                                                </div>
+                                                <div class="course_price ml-auto">Free</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {%endfor%}
+                            </div>
+                        </div>
+                      </div>
+
+                    <!-- Courses Sidebar -->
+
+              {% include "static/includes/courses-side.html"%}
+            </div>
+        </div>
+     </div>
+       <!-- Newsletter -->
+
+  {% include "static/includes/footer.html"%}
+{%endblock%}

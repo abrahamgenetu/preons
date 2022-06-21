@@ -1,0 +1,49 @@
+{% extends "static/header.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+        <div class="home">
+            <div class="breadcrumbs_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>tutor form</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div id="content-wrapper">
+            <div class="container-fluid upload-details">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                        <div class="osahan-form">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                      {{ form|crispy }} {{form.media}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="osahan-area text-center mt-3">
+                            <button class="btn btn-outline-primary" type="submit">Upload Tutor</button>
+                        </div>
+                       </form>
+                   
+                   
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+            <!-- Sticky Footer -->
+
+        </div>
+        <!-- /.content-wrapper -->
+{% endblock content %}

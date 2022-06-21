@@ -1,0 +1,181 @@
+{% extends "static/header.html" %}
+{% block content %}
+  <link rel="stylesheet" type="text/css" href="/static/main/styles/blog.css">
+  <link rel="stylesheet" type="text/css" href="/static/main/styles/blog_responsive.css">
+   <script src="/static/main/js/blog.js"></script>
+
+        <div class="home">
+            <div class="breadcrumbs_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>News</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog -->
+<!-- Blog -->
+<!-- Latest News -->
+
+	<div class="news">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<h2 class="section_title">Latest News</h2>
+						<div class="section_subtitle"><p>Our Preons E -learning platform is open source for students to ask for anything and comment their answer .</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<div class="row news_row">
+				<div class="col-lg-7 news_col">
+
+					<!-- News Post Large -->
+					<div class="news_post_large_container">
+                        {% for news in news %}
+                        {% if forloop.counter0 == 0 %}
+						<div class="news_post_large">
+							<div class="news_post_image"><img src="/static/main/images/Logo.png" alt=""></div>
+							<div class="news_post_large_title"><a href="{{news.header}}">{{news.header}}</a></div>
+							<div class="news_post_meta">
+								<ul>
+									<li><a href="#">admin</a></li>
+									<li><a href="#">{{news.date}}</a></li>
+								</ul>
+							</div>
+							<div class="news_post_text">
+								<p>{{news.header}}.</p>
+							</div>
+							<div class="news_post_link"><a href="/blog_single">read more</a></div>
+						</div>
+                        {% endif%}
+                        {% endfor %}
+					</div>
+				</div>
+
+				<div class="col-lg-5 news_col">
+					<div class="news_posts_small">
+
+						<!-- News Posts Small -->
+                        {% for news in news %}
+						<div class="news_post_small">
+							<div class="news_post_small_title"><a href="{{news.header}}">{{news.header}}</a></div>
+							<div class="news_post_meta">
+								<ul>
+									<li><a href="#">admin</a></li>
+									<li><a href="#">{{news.date}}</a></li>
+								</ul>
+							</div>
+						</div>
+                        {% endfor %}
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="events ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col ">
+                        <div class="section_title_container text-center ">
+                            <h2 class="section_title ">Upcoming events</h2>
+                            <div class="section_subtitle ">
+                                <p>Here is the our notice board for the upcoming events planned by the Preons Academy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row events_row ">
+  <div class="col-lg-4 event_col ">
+                <div class="event event_left ">
+                    <div class="event_image "><img src="/static/main/images/registration.jpg" alt=" "></div>
+                    <div class="event_body d-flex flex-row align-items-start justify-content-start ">
+                        <div class="event_date ">
+                            <div class="d-flex flex-column align-items-center justify-content-center trans_200 ">
+                                <div class="event_day trans_200 ">21</div>
+                                <div class="event_month trans_200 ">Aug</div>
+                            </div>
+                        </div>
+                        <div class="event_content ">
+                            <div class="event_title "><a href="# ">Registration for the summer tech students.</a></div>
+                            <div class="event_info_container ">
+                                <div class="event_info "><i class="fa fa-clock-o " aria-hidden="true "></i><span>15.00 - 19.30</span></div>
+                                <div class="event_info "><i class="fa fa-map-marker " aria-hidden="true "></i><span>25 Bahir Dar City</span></div>
+                                <div class="event_text ">
+                                    <p>This registration held on the Aug in this site or in Bahir dar,Ethiopia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event -->
+            <div class="col-lg-4 event_col ">
+                <div class="event event_mid ">
+                    <div class="event_image "><img src="/static/main/images/upcoming.png" alt=" "></div>
+                    <div class="event_body d-flex flex-row align-items-start justify-content-start ">
+                        <div class="event_date ">
+                            <div class="d-flex flex-column align-items-center justify-content-center trans_200 ">
+                                <div class="event_day trans_200 ">27</div>
+                                <div class="event_month trans_200 ">Aug</div>
+                            </div>
+                        </div>
+                        <div class="event_content ">
+                            <div class="event_title "><a href="# ">Educational tutorial with workshop labratory practice.(Aug 21- Dec 21)</a></div>
+                            <div class="event_info_container ">
+                                <div class="event_info "><i class="fa fa-clock-o " aria-hidden="true "></i><span>09.00 - 17.30</span></div>
+                                <div class="event_info "><i class="fa fa-map-marker " aria-hidden="true "></i><span>25 Bahir Dar</span></div>
+                                <div class="event_text ">
+                                    <p>This educational time covers topics now being debated before...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event -->
+            <div class="col-lg-4 event_col ">
+                <div class="event event_right ">
+                    <div class="event_image "><img src="/static/main/images/inoviation.png" alt=" "></div>
+                    <div class="event_body d-flex flex-row align-items-start justify-content-start ">
+                        <div class="event_date ">
+                            <div class="d-flex flex-column align-items-center justify-content-center trans_200 ">
+                                <div class="event_day trans_200 ">01</div>
+                                <div class="event_month trans_200 ">Sep</div>
+                            </div>
+                        </div>
+                        <div class="event_content ">
+                            <div class="event_title "><a href="# ">Preons innoviation week for students</a></div>
+                            <div class="event_info_container ">
+                                <div class="event_info "><i class="fa fa-clock-o " aria-hidden="true "></i><span>13.00 - 18.30</span></div>
+                                <div class="event_info "><i class="fa fa-map-marker " aria-hidden="true "></i><span>25 New York City</span></div>
+                                <div class="event_text ">
+                                    <p>Students generally agree on a need for reform to new era of tech, but not on which path...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                </div>
+            </div>
+        </div>
+
+	<!-- Newsletter -->
+
+{% include "static/includes/footer.html"%}
+{% endblock %}
